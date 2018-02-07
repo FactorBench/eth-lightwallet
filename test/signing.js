@@ -6,6 +6,7 @@ var fixtures = require('./fixtures/keystore')
 var Transaction = require('ethereumjs-tx')
 var util = require("ethereumjs-util")
 var nacl = require('tweetnacl')
+nacl.util = require('tweetnacl-util');
 
 describe("Signing", function () {
   describe("signTx", function() {
@@ -16,7 +17,7 @@ describe("Signing", function () {
         password: fixture.password,
         seedPhrase: fixture.mnSeed,
         salt: fixture.salt,
-        hdPathString: fixture.hdPathString 
+        hdPathString: fixture.hdPathString
       }, function (err, ks) {
 
         ks.generateNewAddress(pw)
@@ -80,7 +81,7 @@ describe("Signing", function () {
           password: fixture.password,
           seedPhrase: fixture.mnSeed,
           salt: fixture.salt,
-          hdPathString: fixture.hdPathString 
+          hdPathString: fixture.hdPathString
         }, function (err, ks) {
 
           ks.generateNewAddress(pw);
