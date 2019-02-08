@@ -56,6 +56,9 @@
     }
   ],
   "license": "MIT",
+  "peerDependencies": {
+      "mtproto-crypto": "^1.0.1"
+  },
   "dependencies": {
     "bitcore-lib": "^0.16.0",
     "bitcore-mnemonic": "^1.7.0",
